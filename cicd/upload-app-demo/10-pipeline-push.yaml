@@ -15,7 +15,7 @@ spec:
       description: "Git revision to fetch (branch, tag, commit, ...)"
     - name: image-name
       type: string
-      description: "Target image name, e.g. ghcr.io/<GITHUB_USER>/fri-uniza-onpk-cicd"
+      description: "Target image name, e.g. ghcr.io/filipklein5/fri-uniza-onpk-cicd"
     - name: image-tag
       type: string
       description: "Target image tag"
@@ -73,7 +73,7 @@ spec:
         - name: BUILD_EXTRA_ARGS
           # ghcr.io links the package to a repo from the OCI manifest annotation, not the LABEL:
           # drop node's inherited annotations (source = nodejs/docker-node) and set our own
-          value: "--inherit-annotations=false --annotation=org.opencontainers.image.source=https://github.com/<GITHUB_USER>/fri-uniza-onpk-cicd $(params.build-extra-args)"
+          value: "--inherit-annotations=false --annotation=org.opencontainers.image.source=https://github.com/filipklein5/fri-uniza-onpk-cicd $(params.build-extra-args)"
       workspaces:
         - name: source
           workspace: shared-data
