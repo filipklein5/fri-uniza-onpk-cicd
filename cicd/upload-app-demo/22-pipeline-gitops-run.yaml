@@ -17,7 +17,7 @@ spec:
     - name: image-name
       value: "ghcr.io/filipklein5/fri-uniza-onpk-cicd"
     - name: image-tag
-      value: "1.0.2"                                                 # bump on every run
+      value: "1.0.3"                                                 # bump on every run
     - name: git-user-email
       value: "filipklein5@users.noreply.github.com"
   workspaces:
