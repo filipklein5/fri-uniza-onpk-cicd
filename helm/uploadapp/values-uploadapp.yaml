@@ -1,16 +1,13 @@
 image:
-  repository: ghcr.io/filipklein5/fri-uniza-onpk-cicd   # lowercase
-  tag: 1.0.0
-
+  repository: ghcr.io/filipklein5/fri-uniza-onpk-cicd # lowercase
+  tag: 1.0.2
 # GHCR packages are private by default: the cluster pulls with this secret (RUNBOOK 1.7)
 imagePullSecrets:
   - name: ghcr-pull
-
 service:
   type: ClusterIP
   port: 9080
   targetPort: 9080
-
 ingress:
   enabled: true
   className: nginx
@@ -19,11 +16,9 @@ ingress:
       paths:
         - path: /
           pathType: ImplementationSpecific
-
 appbackendDb:
   user: mongoroot
   password: mongotest
-
 mongodb:
   # Official mongo image, see templates/mongodb.yaml
   auth:
