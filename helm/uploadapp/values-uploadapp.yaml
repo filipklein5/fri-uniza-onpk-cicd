@@ -1,6 +1,6 @@
 image:
   repository: ghcr.io/filipklein5/fri-uniza-onpk-cicd # lowercase
-  tag: 1.0.2
+  tag: 1.0.3
 # GHCR packages are private by default: the cluster pulls with this secret (RUNBOOK 1.7)
 imagePullSecrets:
   - name: ghcr-pull
